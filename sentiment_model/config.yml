@@ -6,7 +6,7 @@ training_data_file: xxx.csv
 
 # Variables
 # The variable we are attempting to predict (cnt)
-target: cnt
+target: Sentiment
 
 pipeline_name: sentiment_model
 pipeline_save_file: sentiment__model_output_v
