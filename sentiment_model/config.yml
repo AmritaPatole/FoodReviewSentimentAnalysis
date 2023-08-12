@@ -1,0 +1,47 @@
+# Package Overview
+package_name: sentiment_model
+
+# Data Files
+training_data_file: xxx.csv
+
+# Variables
+# The variable we are attempting to predict (cnt)
+target: cnt
+
+pipeline_name: sentiment_model
+pipeline_save_file: sentiment__model_output_v
+
+# Features that will go inside processing pipeline
+features:
+- ProductId       
+- UserId          
+- ProfileName    
+- Score           
+- Time            
+- Summary        
+- Text            
+
+unused_fields:  # Features to drop before pipeline
+- Id
+- HelpfulnessNumerator
+- HelpfulnessDenominator
+
+
+# Features names
+product_id_var : ProductId     
+user_id_var :  UserId
+profile_name_var : ProfileName
+score_var : Score           
+time_var : Time            
+summary_var : Summary        
+text_var : Text  
+  
+# Set train/test split
+test_size: 0.20
+
+# Set the random seed
+random_state: 42
+
+# Alogrithm parameters
+n_estimators: 10
+max_depth: 10
